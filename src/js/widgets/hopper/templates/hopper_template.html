@@ -4,8 +4,8 @@
 <div class="s-right-col-widget-container">
 
 <div>
-    <i class="icon-help pull-right" style="margin-top:7px" data-toggle="popover" data-placement="left" data-content="These recommendations are based on a number of factors, including text similarity, citations, and co-readership information. This feature is still in beta." data-container=".hopper-widget"></i>
-    <h4 class="s-right-col-widget-title">Suggested Articles</h4>
+    <i class="icon-help pull-right" style="margin-top:7px" data-toggle="popover" data-placement="left" data-content="Hello! I'm the Hopper widget." data-container=".hopper-widget"></i>
+    <h4 class="s-right-col-widget-title">Bibcodes (Hopper Widget)</h4>
 </div>
 
 
@@ -15,7 +15,7 @@
         {{#compare @index 0 operator="<="}}
         <div>
             <li>
-                <a href="#abs/{{bibcode}}">{{title}} (<i class="s-author">{{author}}</i>)</a>;
+                <a href="#abs/{{bibcode}}">{{title}} <i class="s-bibcode">{{bibcode}}</i> </a>;
             </li>
         </div>
         {{/compare}}
@@ -25,7 +25,7 @@
         {{#compare @index 0 operator=">"}}
         <div class="hidden additional-papers">
             <li>
-                <a href="#abs/{{bibcode}}">{{title}} (<i class="s-author">{{author}}</i>)</a>;
+                <a href="#abs/{{bibcode}}">{{title}} <i class="s-bibcode">{{bibcode}}</i> </a>;
             </li>
         </div>
         {{/compare}}
@@ -35,19 +35,3 @@
 
 {{/if}}
 </div>
-<!--
-<div>
-    I'm the new beautiful widget.
-    {{#if msg}}
-    And I have a message for you: <span class="message">{{msg}}</span>
-    {{else}}
-    But I don't have any message for you. <span class="message"></span>
-    {{/if}}
-
-    {{#unless name}}
-    Please tell me your name: <input type="text" value="">
-    <button class="hello">OK</button>
-    {{else}}
-    {{name}}
-    {{/unless}} 
-</div> -->
