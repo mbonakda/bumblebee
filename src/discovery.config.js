@@ -1,5 +1,8 @@
 // Main config file for the Discovery application
 require.config({
+
+
+
   // Initialize the application with the main application file or if we run
   // as a test, then load the test unittests
   deps: (function(){
@@ -138,7 +141,9 @@ require.config({
 
         IndividualLibraryWidget : 'js/widgets/library_individual/widget',
         AllLibrariesWidget : 'js/widgets/libraries_all/widget',
-        LibraryListWidget : 'js/widgets/library_list/widget'
+        LibraryListWidget : 'js/widgets/library_list/widget',
+        HopperWidget : 'js/widgets/hopper/widget', // HOPPER WIDGET INSERT
+        HelloWorld : 'js/widgets/hello_world/widget' // HELLOWORLD INSERT
       },
       plugins: {}
       }
@@ -170,12 +175,9 @@ require.config({
     "underscore": "libs/lodash/lodash.compat",
 
     // 3rd party dependencies
-    // I can't for the life of my figure out how to swap non-minified libs in dev
-    // to minified libs in the r.js optimize task
-    react : '//cdnjs.cloudflare.com/ajax/libs/react/15.2.1/react-with-addons.min',
-    'react-dom' : '//cdnjs.cloudflare.com/ajax/libs/react/15.2.1/react-dom.min',
-    jquery : '//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min',
-    'jquery-ui' : '//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min',
+    'jquery': 'libs/jquery/jquery',
+    'react' : 'libs/react/react-with-addons',
+    'react-dom' : 'libs/react/react-dom',
      es6: 'libs/requirejs-babel-plugin/es6',
      babel: 'libs/requirejs-babel-plugin/babel-5.8.34.min',
     'redux' : 'libs/redux/index',
@@ -189,8 +191,10 @@ require.config({
     'backbone.eventbinder' : 'libs/backbone.eventbinder/backbone.eventbinder',
     'backbone.babysitter' : 'libs/backbone.babysitter/backbone.babysitter',
     'bootstrap': 'libs/bootstrap/bootstrap',
+    'jquery-ui' : 'libs/jqueryui/jquery-ui',
     'd3':'libs/d3/d3',
     'd3-cloud' : 'libs/d3-cloud/d3.layout.cloud',
+    'hoverIntent': 'libs/jquery-hoverIntent/jquery.hoverIntent',
     'cache': 'libs/dsjslib/lib/Cache',
     'jquery-querybuilder': 'libs/jQuery-QueryBuilder/query-builder',
     'nvd3' :  'libs/nvd3/nv.d3',
@@ -205,8 +209,6 @@ require.config({
     'sprintf': 'libs/sprintf/sprintf',
     'chai': '../bower_components/chai/chai',
     'sinon': '../bower_components/sinon/index',
-    //have to add this for tests
-    'dev-react' : '../bower_components/react/react-with-addons',
     'filesaver' : 'libs/FileSaver/FileSaver',
     'select2' : 'libs/select2/select2',
     'squire': '../bower_components/squire/src/Squire',
