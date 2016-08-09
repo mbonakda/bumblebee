@@ -68,7 +68,7 @@ First:
   $ git pull
 ```
 
-Now, you can see for yourself the [hello world widget](/bumblebee/src/js/widgets/hello_world). This [widgets folder](/bumblebee/src/js/widgets) is also where the rest of the widgets appear to be.
+Now, you can see for yourself the [hello world widget](../src/js/widgets/hello_world). This [widgets folder](/bumblebee/src/js/widgets) is also where the rest of the widgets appear to be.
 
 To get the widget to appear on the search results page, we'll need to make edits in four locations:
 
