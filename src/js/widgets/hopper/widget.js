@@ -102,21 +102,20 @@ define([
           all the bibcodes are selected, now send them to the api endpoint
          */
 
-        function done(data) {
-          this.collection.reset(data.keywords);
-        }
-
         function fail() {
           console.error('query failed')
         }
 
+        var self = this
         var request = new ApiRequest({
-          target: 'http://localhost:5000/hopper',
+          target: 'http://localhost:5000/hopper/bibcodes=',
           options: {
-            type: 'GET',
+            type: 'POST',
             data: JSON.stringify(this._bibcodeCache),
             contentType: "application/json",
-            done: done,
+            done: function (data) {
+                    self.collection.reset(data.bibcodes);
+               },
             fail: fail
           }
         });
